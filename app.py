@@ -14,7 +14,7 @@ dados = st.sidebar.selectbox('Selecione a data', ['2025-11-25',
                                                   '2025-11-29',
                                                   '2025-11-30'])
 
-csv_file = f'dados\\focos_diario_br_{dados.replace('-', '')}.csv'
+csv_file = f'dados/focos_diario_br_{dados.replace('-', '')}.csv'
 
 df = pd.read_csv(csv_file)
 
@@ -31,4 +31,5 @@ fig = px.scatter_mapbox(
 )
 
 st.plotly_chart(fig, use_container_width=True)
+
 
